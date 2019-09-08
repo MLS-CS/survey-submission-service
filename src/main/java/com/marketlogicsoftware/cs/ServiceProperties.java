@@ -1,11 +1,11 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice;
+package com.marketlogicsoftware.cs;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties("app")
-public class SurveySubmissionProperties {
+public class ServiceProperties {
     private DB db;
 
     public DB getDb() {

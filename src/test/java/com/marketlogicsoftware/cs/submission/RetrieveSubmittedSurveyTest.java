@@ -1,7 +1,7 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice.submission;
+package com.marketlogicsoftware.cs.submission;
 
-import com.marketlogicsoftware.cs.surveysubmissionservice.submission.models.QuestionSubmission;
-import com.marketlogicsoftware.cs.surveysubmissionservice.submission.models.SurveySubmission;
+import com.marketlogicsoftware.cs.submission.models.QuestionSubmission;
+import com.marketlogicsoftware.cs.submission.models.SurveySubmission;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +21,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class SurveySubmissionRetrieveTest {
+public class RetrieveSubmittedSurveyTest {
 
     @Autowired
     private WebTestClient webTestClient;

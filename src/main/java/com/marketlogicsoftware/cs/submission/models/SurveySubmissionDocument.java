@@ -1,4 +1,4 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice.submission.models;
+package com.marketlogicsoftware.cs.submission.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

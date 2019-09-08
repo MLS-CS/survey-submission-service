@@ -1,7 +1,7 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice.submission;
+package com.marketlogicsoftware.cs.submission;
 
-import com.marketlogicsoftware.cs.surveysubmissionservice.submission.models.SurveySubmission;
-import com.marketlogicsoftware.cs.surveysubmissionservice.submission.models.SurveySubmissionDocument;
+import com.marketlogicsoftware.cs.submission.models.SurveySubmission;
+import com.marketlogicsoftware.cs.submission.models.SurveySubmissionDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;

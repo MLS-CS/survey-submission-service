@@ -1,6 +1,7 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice;
+package com.marketlogicsoftware.cs;
 
 import com.mongodb.MongoClient;
+import cz.jirutka.spring.embedmongo.EmbeddedMongoBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,21 +11,21 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import java.io.IOException;
 
 @Configuration
-@Profile("prod")
-public class SurveySubmissionProdConfiguration {
+@Profile("dev")
+public class ServiceDevConfiguration {
     @Autowired
-    private SurveySubmissionProperties surveySubmissionProperties;
+    private ServiceProperties serviceProperties;
 
     @Bean
     public MongoClient mongoClient() throws IOException {
-        return new MongoClient(
-                surveySubmissionProperties.getDb().getHost(),
-                surveySubmissionProperties.getDb().getPort());
+        return new EmbeddedMongoBuilder()
+                .bindIp(serviceProperties.getDb().getHost())
+                .build();
     }
 
     @Bean
     public MongoTemplate mongoTemplate() throws IOException {
-        return new MongoTemplate(mongoClient(), surveySubmissionProperties.getDb().getName());
+        return new MongoTemplate(mongoClient(), serviceProperties.getDb().getName());
     }
 
 }

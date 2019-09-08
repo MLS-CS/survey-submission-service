@@ -1,4 +1,4 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice.submission.models;
+package com.marketlogicsoftware.cs.submission.models;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;

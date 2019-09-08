@@ -1,6 +1,6 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice.submission;
+package com.marketlogicsoftware.cs.submission;
 
-import com.marketlogicsoftware.cs.surveysubmissionservice.submission.models.SurveySubmission;
+import com.marketlogicsoftware.cs.submission.models.SurveySubmission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

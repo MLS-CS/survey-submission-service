@@ -1,4 +1,4 @@
-package com.marketlogicsoftware.cs.surveysubmissionservice;
+package com.marketlogicsoftware.cs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
