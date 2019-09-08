@@ -19,7 +19,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.marketlogicsoftware.cs.surveysubmissionservice"))
+                .apis(RequestHandlerSelectors.basePackage("com.marketlogicsoftware.cs"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
