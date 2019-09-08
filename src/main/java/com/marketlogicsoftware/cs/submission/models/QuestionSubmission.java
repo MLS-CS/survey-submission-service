@@ -2,20 +2,19 @@ package com.marketlogicsoftware.cs.submission.models;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 public class QuestionSubmission {
     @NotNull
     private String questionId;
     @NotNull
     @NotEmpty
-    private List<String> answerIds;
+    private String answerId;
 
     public QuestionSubmission(){}
 
-    public QuestionSubmission(@NotNull String questionId, List<String> answerIds) {
+    public QuestionSubmission(@NotNull String questionId, String answerId) {
         this.questionId = questionId;
-        this.answerIds = answerIds;
+        this.answerId = answerId;
     }
 
     public String getQuestionId() {
@@ -26,11 +25,11 @@ public class QuestionSubmission {
         this.questionId = questionId;
     }
 
-    public List<String> getAnswerIds() {
-        return answerIds;
+    public String getAnswerId() {
+        return answerId;
     }
 
-    public void setAnswerIds(List<String> answerIds) {
-        this.answerIds = answerIds;
+    public void setAnswerId(String answerIds) {
+        this.answerId = answerIds;
     }
 }
