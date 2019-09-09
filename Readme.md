@@ -11,6 +11,43 @@ This service provides apis to manage survey and support following features :
 
 **API Documentation** http://localhost:8083/api/swagger-ui.html
 
+**API Usage (via Postman)**
+ * Create Submission 
+     * Request URL : http://localhost:8083/api/survey/submission
+     * Request Body:
+        ```
+        {
+        	"surveyId":"{surveyId}",
+        	"questionSubmissions":[
+        	    {
+        		    "questionId": "{questionId}",
+        		    "answerId":"{answerId}"
+        	    }]
+        }
+        ```
+     * Response Header:
+        ```
+        Location : http://localhost:8083/api/survey/submission/{submissionId}  
+        ```
+     * Response Status:
+        ```
+        201
+        ```
+        
+ * Retrieve Submission 
+    * Request URL : http://localhost:8083/api/survey/submission/{submissionId}
+    * Response Body:
+        ```
+         {
+               "surveyId":"{surveyId}",
+                "questionSubmissions":[
+                 {
+                    "questionId": "{questionId}",
+                    "answerId":"{answerId}"
+                }]
+         }
+        ```
+                    
 **Publish Sonar Results** : *mvnw.cmd clean install sonar:sonar -Dsonar.projectKey={projectKey}  -Dsonar.organization={organization}  -Dsonar.host.url={host}  -Dsonar.login={login}*
 
 **Build Docker Container** : *mvnw.cmd clean install dockerfile:build*
