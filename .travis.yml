@@ -20,4 +20,4 @@ services:
 script:
   - ./mvnw clean jacoco:prepare-agent install -Pci -Dsonar.projectKey=MLS-CS_survey-submission-service  -Dsonar.host.url=https://sonarcloud.io
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push anantpawar/survey-submission-service
+  - docker push mlscs/survey-submission-service

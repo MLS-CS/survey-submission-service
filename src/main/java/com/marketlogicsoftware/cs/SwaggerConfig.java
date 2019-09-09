@@ -28,7 +28,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "Survey Service",
-                "This service provides API's for submitting and retrieving submitted survey.",
+                "This service provides API's for submitting survey and retrieving submission.",
                 "0.1",
                 null,
                 new Contact("Anant", "http://portfolio.anantpawar.me", "anant.c.pawar@gmail.com"),
